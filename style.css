@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: white;
+    background-color: #0b0b0b;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    padding: 8px 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.nav-part1 {
+    /* background-color: red; */
+    height: 75px;
+    overflow: hidden;
+
+}
+
+.nav-part1 svg {
+    display: block;
+}
+
+.nav-part1 .twogoodlogo {
+    margin-top: -10px;
+}
+
+
+
+#links {
+    padding: 10px;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav #nav-part2 a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 10px;
+    margin: 0px 20px;
+}
+
+#icons {
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+#nav-part2 #icons i {
+    font-size: 13px;
+    margin: 20px;
+    font-weight: 100;
+}
+
+#cursor {
+    height: 200px;
+    width: 200px;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%)scale(0);
+    /* filter: blur(10px); */
+}
+
+#page1 {
+    padding-top: 30vh;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    max-width: 100%;
+
+}
+
+#page1 h1 {
+
+    /* margin-left: 20px; */
+    text-transform: uppercase;
+    font-family: 'futura';
+    /* font-size: calc((100vw - 4px) * 0.1695); */
+
+    font-size: 15.8vw;
+    line-height: 13vw;
+    letter-spacing: -8px;
+    /* font-weight: bold; */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#video-container {
+    margin-top: 10px;
+    height: 100vh;
+    width: 100%;
+    background: grey;
+    position: relative;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #Play {
+    padding: 2.5vw 2vw;
+    font-size: 1.3vw;
+    background: linear-gradient(to right, #0b0b0b, #292952);
+    color: white;
+    font-family: 'futura';
+    position: fixed;
+    border-radius: 50%;
+    /* position: absolute; */
+    opacity: 0;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 1vw;
+    object-fit: cover;
+
+}
+
+#page2 .elem {
+    height: 90%;
+    width: 30%;
+    /* background: #000; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page2 img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    /* scale: (1.1); */
+}
+
+.elem .detail {
+    min-height: 40px;
+    width: 60%;
+    position: absolute;
+    z-index: 9;
+    background-color: palegoldenrod;
+    border-radius: 10px;
+    /* transform: scaleY(1); */
+    /* Initial transform scale along the Y-axis */
+    transform-origin: top;
+    /* Set the transform origin to the top */
+    transition: transform 0.3s ease;
+
+
+}
+
+.detail .head {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    padding: 1vw;
+    align-items: center;
+    text-transform: uppercase;
+    position: fixed;
+
+
+}
+
+.detail .head h6 {
+    margin: 0 2vw;
+
+}
+
+.detail .head h6,
+i {
+
+    cursor: pointer;
+}
+
+.detail.size {
+    height: 100%;
+    width: 100%;
+    scale: 1;
+}
+
+.size:hover {
+    transform: scale(1.4);
+}
+
+.text-section {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    height: 60vh;
+    width: auto;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.text-section .big {
+    height: 60%;
+    width: 80vw;
+
+}
+
+.text-section .big p {
+    /* text-transform: uppercase; */
+    font-size: 3vw;
+    margin: 10px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-section .samll p {
+    font-size: 1.3vw;
+    margin: 10px;
+    font-family: 'cursive';
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.text-section .samll {
+    margin-left: 30vw;
+    width: 60vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.text-section .samll p {
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    margin: 10px;
+    margin: 1vw 0;
+
+}
+
+.text-section .small a {
+    text-decoration: revert;
+    color: #000;
+
+    font-family: "ABC Social Mono", "Lucida Sans", Tahoma;
+    font-weight: 500;
+
+    position: relative;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    scale: 1;
+    transition: all ease 0.2s;
+    margin-bottom: 5px;
+}
+
+.text-section .small a:hover {
+    color: red;
+}
+
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child {
+    height: 55vh;
+    width: 40vw;
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.child img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+#page4 {
+    height: 30vh;
+    width: 100%;
+}
+
+.split-parent {
+    display: block;
+    text-align: center;
+    position: relative"
+
+}
+.split-parent p {
+    font-size: 5vw;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    font-family: "ABC Social Mono", "Lucida Sans", Tahoma;
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+
+
+/* Style the footer and its content */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the social media icons (images) */
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media img {
+    width: 30px; /* Adjust the size of the icons as needed */
+    height: auto;
+    transition: transform 0.2s;
+}
+
+/* Add a hover effect to the icons */
+.social-media img:hover {
+    transform: scale(1.2); /* Increase the size on hover */
+}
+
+@media (max-width:600px) {
+    .nav-part1 {
+        /* background-color: red; */
+        height: 74px;
+        width: 150px;
+        overflow: hidden;
+
+    }
+
+    #links {
+        display: none;
+
+    }
+
+    #twogoodlogo {
+        height: 38px;
+        margin-left: -6.39px;
+        margin-top: -9px;
+    }
+
+    #page1 {
+        padding: 0 3vw;
+        padding-top: 30vh;
+        width: 100%;
+        min-height: 70vh;
+
+    }
+
+    #page1 h1 {
+
+        text-transform: uppercase;
+        font-family: 'futura';
+
+        font-size: 15.8vw;
+        line-height: 14vw;
+        letter-spacing: -3px;
+
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #video-container {
+        margin-top: 3vw;
+        height: 35vh;
+        width: 100%;
+
+    }
+
+    #video-container #Play {
+        padding: 7.5vw 5.2vw;
+        font-size: 4vw;
+        position: absolute;
+        border-radius: 50%;
+        scale: 1;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw 3vw;
+        /* background-color: red; */
+    }
+
+    #page2 .elem {
+        min-height: 100vh;
+        width: 100%;
+        margin: 2vw 0;
+        background: #000;
+        overflow: hidden;
+        /* border: 2px solid green; */
+    }
+
+    #page2 img {
+        object-fit: cover;
+        height: 100vh;
+        width: 100%;
+        scale: 1.1;
+    }
+ 
+    
+    .detail .head h6 {
+        margin: 0 2vw;
+        font-size: 10px;
+    
+    }
+    
+    .detail .head h6,
+    i {
+    margin: 0 20px;
+        cursor: pointer;
+    }
+    #page3 {
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .child {
+        height: 55vh;
+        width: 80vw;
+        position: relative;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2vw;
+
+    }
+
+    .child img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+ .text-section {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    width: auto;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+}
+
+/* Combine the styles for .big and .small */
+.text-section .big,
+.text-section .small {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    width: auto;
+}
+
+.text-section .big p {
+    font-size: 6vw;
+    margin: 10px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-section .small p {
+    font-size:  3vw; /* Increase the font size by 3vw */
+    font-family: 'cursive';
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin: 1vw 0; /* Adjust the margin as needed */
+}
+
+.text-section .small a {
+    text-decoration: revert;
+    color: #000;
+    font-family: "ABC Social Mono", "Lucida Sans", Tahoma;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    scale: 1;
+    transition: all ease 0.2s;
+    margin-bottom: 5px;
+}
+
+.text-section .small a:hover {
+    color: red;
+}
+
+/* Style the footer and its content */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the social media icons (images) */
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media img {
+    width: 30px; /* Adjust the size of the icons as needed */
+    height: auto;
+    transition: transform 0.2s;
+}
+
+/* Add a hover effect to the icons */
+.social-media img:hover {
+    transform: scale(1.2); /* Increase the size on hover */
+}
+}

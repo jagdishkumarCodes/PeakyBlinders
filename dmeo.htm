@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Scaling</title>
+    <!-- Include GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div id="page2">
+        <div id="elem1" class="elem">
+            <img data-scroll data-scroll-speed="0.8" src="peakpx 1.jpg" alt="" />
+            <div data-scroll data-scroll-speed="-2" class="detail">
+                <div class="head">
+                    <i class="ri-arrow-right-circle-fill"></i>
+                    <h6>Home</h6>
+                    <h6>Watch</h6>
+                </div>
+                <div class="size"></div>
+            </div>
+        </div>
+        <!-- Repeat the same structure for elem2 and elem3 -->
+    </div>
+
+    <script>
+        // Select all elements with the class "elem"
+        var elems = document.querySelectorAll("#page2 .elem");
+
+        elems.forEach(function (elem) {
+            elem.addEventListener("mouseenter", function () {
+                // Target the .detail.size element within the current .elem
+                var size = this.querySelector(".detail .size");
+                gsap.to(size, {
+                    scaleY: 3,
+                });
+            });
+
+            elem.addEventListener("mouseleave", function () {
+                // Target the .detail.size element within the current .elem
+                var size = this.querySelector(".detail .size");
+                gsap.to(size, {
+                    scaleY: 1,
+                });
+            });
+        });
+    </script>
+</body>
+</html>
