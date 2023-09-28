@@ -144,18 +144,6 @@ function cursorAnimation() {
 }
 cursorAnimation()
 
-// Get all elements with class "hover-effect"
-const sizeDivs = document.querySelectorAll('.size');
 
-// Add event listeners for hover effect
-sizeDivs.forEach(function (sizeDiv) {
-  sizeDiv.addEventListener('mouseenter', function () {
-    this.style.transform = 'scale(1.4)';
-  });
-
-  sizeDiv.addEventListener('mouseout', function () {
-    this.style.transform = 'scale(1)';
-  });
-});
 
 
