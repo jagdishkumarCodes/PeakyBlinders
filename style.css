@@ -472,9 +472,17 @@ footer {
         scale: 1.1;
     }
 
-.detail{
-    scale:1;
-}
+    .detail .head {
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        padding: 1vw;
+        align-items: center;
+        text-transform: uppercase;
+        position: fixed;
+    
+    
+    }
     .detail .head h6 {
         margin: 0 2vw;
         font-size: 10px;
